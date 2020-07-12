@@ -23,8 +23,8 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarmain" style="width: 0; max-width: 0;">
                         <ul class="navbar-nav" style="margin-right: 0px; padding-right: 0px;">
-                            <a href="index.html" rel="noopener noreferrer" class="btn btn-dark btn-sr" id="btnsr">Showreel</a>
-                            <audio src="assets/audio/UI_mouse_over.mp3" preload="auto" id="sra">Your browser doesn't support HTML5 audio tag.</audio>
+                            <a href="index.html" rel="noopener noreferrer" class="active btn btn-dark btn-sr">Showreel</a>
+                            <audio src="assets/audio/UI_mouse_over.ogg" preload="auto" id="sra"></audio>
                             <a href="resume.html" rel="noopener noreferrer" class="btn btn-dark btn-sr" data-pg-ia='{"l":[{"trg":"mouseenter"}]}'>Resume</a>
                             <a href="contact.html" rel="noopener noreferrer" class="btn btn-dark btn-sr" data-pg-ia='{"l":[{"trg":"click","t":"index.html"}]}'>Contact</a>
                         </ul>
@@ -44,10 +44,11 @@
         <script src="assets/js/popper.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script>var showReel = $("#sra")[0];
-                                $("#btn-sr")
+                                $(".btn-sr")
                                     .mouseenter(function() {
                                     showReel.play();
-                                });</script>
+                                });
+    	</script>
         <div class="accordion" id="accordionExample">
 </div>
         <div class="container">
@@ -70,4 +71,3 @@
 })
 </script>
     </body>
-</html>

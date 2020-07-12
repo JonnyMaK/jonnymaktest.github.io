@@ -23,25 +23,19 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarmain" style="width: 0; max-width: 0;">
                         <ul class="navbar-nav" style="margin-right: 0px; padding-right: 0px;">
-                            <a href="index.html" rel="noopener noreferrer" class="active btn btn-dark" id="btnsr">Showreel</a>
-                            <audio src="assets/audio/UI_Back.mp3" preload="auto" id="sra">Your browser doesn't support HTML5 audio tag.</audio>
-                            <a href="resume.html" rel="noopener noreferrer" class="btn btn-dark" data-pg-ia='{"l":[{"trg":"mouseenter"}]}'>Resume</a>
-                            <a href="contact.html" rel="noopener noreferrer" class="btn btn-dark" data-pg-ia='{"l":[{"trg":"click","t":"index.html"}]}'>Contact</a>
+                            <a href="index.html" rel="noopener noreferrer" class="active btn btn-dark btn-sr">Showreel</a>
+                            <audio src="assets/audio/UI_mouse_over.ogg" preload="auto" id="sra"></audio>
+                            <a href="resume.html" rel="noopener noreferrer" class="btn btn-dark btn-sr" data-pg-ia='{"l":[{"trg":"mouseenter"}]}'>Resume</a>
+                            <a href="contact.html" rel="noopener noreferrer" class="btn btn-dark btn-sr" data-pg-ia='{"l":[{"trg":"click","t":"index.html"}]}'>Contact</a>
                         </ul>
                     </div>
-                    <div class="row">
-                        <div class="container">
-                            <script>var showReel = $("#sra");
-                                $("#btnsr")
-                                    .mouseenter(function() {
-                                    showReel.play();
-                                });</script>
-                        </div>
-                    </div>
                     <a class="mx-auto navbar-brand" href="#" style="width: 110px; padding-left: 65px;">MAK.AUDIO</a>
-                    <a class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-linkedin" data-pg-ia='{"l":[{"trg":"mouseenter","a":"headShake"},{"trg":"click","t":"$nav","a":"hinge"},{"trg":"click"}]}' href="#" data-html="true"> </a> 
-                    <a class="btn d-none d-sm-inline fa fa-facebook-square fa-inverse fa-lg" data-pg-ia='{"l":[{"trg":"mouseenter","a":"swing"}]}' href="#"></a>
-                    <a class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-twitter mr-md-" data-pg-ia='{"l":[{"trg":"mouseenter","a":"tada"}]}' href="#"></a>
+                    <a class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-linkedin" id="libtn" data-pg-ia='{"l":[{"trg":"mouseenter","a":"headShake"},{"trg":"click","t":"$nav","a":"hinge"},{"trg":"click"}]}' href="#" data-html="true"> </a> 
+                    <audio src="assets/audio/UI_Linkedin.mp3" preload="auto" id="liuiaud"></audio>
+                    <a class="btn d-none d-sm-inline fa fa-facebook-square fa-inverse fa-lg" id="fabtn" data-pg-ia='{"l":[{"trg":"mouseenter","a":"swing"}]}' href="#"></a>
+                    <audio src="assets/audio/UI_Facebook.mp3" preload="auto" id="fauiaud"></audio>
+                    <a class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-twitter mr-md-" id="twbtn" data-pg-ia='{"l":[{"trg":"mouseenter","a":"tada"}]}' href="#"></a>
+                    <audio src="assets/audio/UI_Twitter.mp3" preload="auto" id="twuiaud"></audio>
                 </div>
             </div>
         </nav>
@@ -52,6 +46,34 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/popper.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>var UIAudio = $("#sra")[0];
+                                $(".btn-sr")
+                                    .mouseenter(function() {
+                                    UIAudio.play();
+                                    UIAudio.volume=0.5;
+                                });
+    	</script>
+        <script>var LiAudio = $("#liuiaud")[0];
+                                $("#libtn")
+                                    .mouseenter(function() {
+                                    LiAudio.play();
+                                    LiAudio.volume=0.4;
+                                });
+    	</script>
+        <script>var FaAudio = $("#fauiaud")[0];
+                                $("#fabtn")
+                                    .mouseenter(function() {
+                                    FaAudio.play();
+                                    FaAudio.volume=0.47;
+                                });
+    	</script>
+        <script>var TwAudio = $("#twuiaud")[0];
+                                $("#twbtn")
+                                    .mouseenter(function() {
+                                    TwAudio.play();
+                                    TwAudio.volume=0.4;
+                                });
+    	</script>
         <div class="accordion" id="accordionExample">
 </div>
         <div class="container">
@@ -74,4 +96,3 @@
 })
 </script>
     </body>
-</html>
