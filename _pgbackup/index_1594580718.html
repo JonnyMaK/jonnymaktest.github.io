@@ -14,7 +14,7 @@
         <script>/* Pinegrow Interactions, do not remove */ try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id')?document.documentElement.hasAttribute('data-pg-mobile'):(screen.width<1000&&screen.height<1000)){pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}';}else{pgcss+='html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}';}style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}</script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body style="background-image: url('assets/Images/Background Basic PS.png'); background-repeat: no-repeat; background-size: cover; background-position: inherit;" class="text-center">
+    <body style="background-image: url('assets/Images/Background Basic PS.png'); background-repeat: no-repeat; background-size: cover; background-position: inherit;" class="text-center" data-pg-ia-hide data-pg-ia='{"l":[{"trg":"load","t":"this","a":"fadeIn"}]}'>
         <nav class="bg-dark fixed-top navbar navbar-dark navbar-expand-lg">
             <div class="container">
                 <div class="container-fluid">
@@ -23,19 +23,16 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarmain" style="width: 0; max-width: 0;">
                         <ul class="navbar-nav" style="margin-right: 0px; padding-right: 0px;">
-                            <a href="index.html" class="btn btn-dark">Showreel</a>
-                            <a href="resume.html" class="btn btn-dark">Resume</a>
-                            <a href="contact.html" class="btn btn-dark">Contact</a>
+                            <a href="index.html" rel="noopener noreferrer" class="active btn btn-dark btn-sr">Showreel</a>
+                            <audio src="assets/audio/UI_mouse_over.mp3" preload="auto" id="sra"></audio>
+                            <a href="resume.html" rel="noopener noreferrer" class="btn btn-dark btn-sr" data-pg-ia='{"l":[{"trg":"mouseenter"}]}'>Resume</a>
+                            <a href="contact.html" rel="noopener noreferrer" class="btn btn-dark btn-sr" data-pg-ia='{"l":[{"trg":"click","t":"index.html"}]}'>Contact</a>
                         </ul>
                     </div>
-                    <div class="row">
-                        <div class="container">
-</div>
-                    </div>
                     <a class="mx-auto navbar-brand" href="#" style="width: 110px; padding-left: 65px;">MAK.AUDIO</a>
-                    <i class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-linkedin" href="#"> </i> 
-                    <i class="btn d-none d-sm-inline fa fa-facebook-square fa-inverse fa-lg"></i>
-                    <i class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-twitter mr-md-"></i>
+                    <a class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-linkedin" data-pg-ia='{"l":[{"trg":"mouseenter","a":"headShake"},{"trg":"click","t":"$nav","a":"hinge"},{"trg":"click"}]}' href="#" data-html="true"> </a> 
+                    <a class="btn d-none d-sm-inline fa fa-facebook-square fa-inverse fa-lg" data-pg-ia='{"l":[{"trg":"mouseenter","a":"swing"}]}' href="#"></a>
+                    <a class="btn d-none d-sm-inline fa fa-inverse fa-lg fa-twitter mr-md-" data-pg-ia='{"l":[{"trg":"mouseenter","a":"tada"}]}' href="#"></a>
                 </div>
             </div>
         </nav>
@@ -46,6 +43,12 @@
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/popper.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>var showReel = $("#sra")[0];
+                                $(".btn-sr")
+                                    .mouseenter(function() {
+                                    showReel.play();
+                                });
+    	</script>
         <div class="accordion" id="accordionExample">
 </div>
         <div class="container">
@@ -62,5 +65,9 @@
             <a href="mailto:jonny@mak.audio" class="btn"> <h5><i class="fa fa-envelope-o"></i>jonny@mak.audio</h5> </a>
         </footer>
         <script type="text/javascript" src="pgia/lib/pgia.js"></script>
+        <script>
+    $(function() {
+    $('[data-toggle="popover"]').popover();
+})
+</script>
     </body>
-</html>
